@@ -223,7 +223,7 @@ var x = require("./accounts").userAccount;
 
 ### `@import`
 
-`@import` can be used for type-only imports:
+The `@import` tag can let us reference exports from other files.
 
 ```js twoslash
 // @filename: types.d.ts
@@ -243,6 +243,20 @@ var myPet;
 myPet.name;
 ```
 
+These tags don't actually import files at runtime, and the symbols they bring into scope can only be used within JSDoc comments for type-checking.
+
+```js twoslash
+// @filename: dog.js
+export class Dog {
+  woof() {
+    console.log("Woof!");
+  }
+}
+
+// @filename: main.js
+/** @import { Dog } from "./dog.js";
+
+const d = new Dog(); // error!
 ### `@param` and `@returns`
 
 `@param` uses the same type syntax as `@type`, but adds a parameter name.
