@@ -257,6 +257,8 @@ export class Dog {
 /** @import { Dog } from "./dog.js";
 
 const d = new Dog(); // error!
+```
+
 ### `@param` and `@returns`
 
 `@param` uses the same type syntax as `@type`, but adds a parameter name.
