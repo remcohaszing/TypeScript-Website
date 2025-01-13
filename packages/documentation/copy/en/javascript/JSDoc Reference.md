@@ -254,7 +254,7 @@ export class Dog {
 }
 
 // @filename: main.js
-/** @import { Dog } from "./dog.js";
+/** @import { Dog } from "./dog.js" */
 
 const d = new Dog(); // error!
 ```
